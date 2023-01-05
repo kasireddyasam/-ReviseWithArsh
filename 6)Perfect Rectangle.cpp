@@ -14,9 +14,9 @@ public:
             mark[x2*N+y2]++;
         }
         int n_mark=0;
-        for(auto ptr=mark.begin();ptr!=mark.end();ptr++)
-            if(ptr->second!=0){
-                if(abs(ptr->second)!=1) return false;
+        for(auto it=mark.begin();it!=mark.end();it++)
+            if(it->second!=0){
+                if(abs(it->second)!=1) return false;
                 n_mark++;
             }
         return n_mark==4;
